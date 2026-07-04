@@ -132,7 +132,7 @@ h2 {
 .card.photo {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers the image horizontally */
+    align-items: center; 
 }
 
 /* Photo adjustments */
@@ -143,6 +143,80 @@ h2 {
     max-width: 100%;
     height: auto;
 }
+
+
+/* Header Base Layout */
+header {
+    background-color: #1b365d; 
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+}
+
+/* Logo and Profile */
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* Hamburger Button Styling */
+#menu-button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0 5px;
+    transition: color 0.3s ease;
+}
+
+#menu-button:hover {
+    color: #ffcc00; 
+}
+
+/* Mobile Navigation Menu Layout */
+#nav-menu {
+    display: none; 
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1b365d;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+/* Universal display */
+#nav-menu.open {
+    display: flex;
+}
+
+/* Navigation Links */
+#nav-menu a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Wayfinding and Interactive States */
+#nav-menu a:hover, 
+#nav-menu a.active {
+    background-color: #ffffff;
+    color: #1b365d;
+}
+
+
 
 
 /* Footer Layout Base */
