@@ -1,4 +1,4 @@
-// Course array representing the Web and Computer Programming certificate data
+// Computer Programming certificate data
 const courses = [
     {
         subject: 'CSE',
@@ -50,7 +50,7 @@ const courses = [
     }
 ];
 
-// Elements selection for dynamic injection and filtering
+// Elements selection for dynamic injection
 const container = document.getElementById('courses-container');
 const totalCreditsEl = document.getElementById('total-credits');
 
@@ -64,7 +64,7 @@ function displayCourses(filteredCourses) {
         container.appendChild(card);
     });
 
-    // Use reduce to calculate credits dynamically based on current display
+    // Use reduce to calculate credits dynamically based
     const totalCredits = filteredCourses.reduce((sum, course) => sum + course.credits, 0);
     totalCreditsEl.textContent = totalCredits;
 }
@@ -90,12 +90,12 @@ function setActiveButton(activeBtn) {
     activeBtn.classList.add('active');
 }
 
-// Footer date initialization and default layout rendering
+// Footer date initialization 
 document.addEventListener("DOMContentLoaded", () => {
     // Initial load of all available courses
     displayCourses(courses);
 
-    // Dynamic copyright year and last modified string
+    // copyright year 
     document.getElementById('currentyear').textContent = new Date().getFullYear();
     document.getElementById('lastModified').textContent = `Last Modification: ${document.lastModified}`;
 });
