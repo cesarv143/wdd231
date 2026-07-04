@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231 - Home Page</title>
+    <meta name="description" content="WDD 231 Advanced Web Frontend Development - Course Home Page for César Velasco.">
+    <meta name="author" content="César Velasco">
+    
+    <!-- Google Fonts & Stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    
+    <!-- Deferred Scripts -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <!-- Optimized SVG under 125 kB -->
+            <svg class="logo" width="40" height="40" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" fill="#1b365d"/>
+                <text x="50" y="55" fill="white" font-size="20" text-anchor="middle">WDD</text>
+            </svg>
+            <span>César Velasco</span>
+        </div>
+        <button id="menu-button" aria-label="Open menu">☰</button>
+        <nav id="nav-menu">
+            <a href="#" class="active">Home</a>
+            <a href="chamber/index.html">Chamber</a>
+            <a href="final/index.html">Final</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+        <div class="grid-container">
+            <section class="card about">
+                <h2>About Me</h2>
+                <p>I am an IT professional based in Mexico City, specializing in technical support, hardware repair, and database administration. I am currently pursuing my university studies via distance learning to enhance my skills in interactive systems and frontend web development.</p>
+            </section>
+
+            <section class="card photo">
+                <h2>Student Photo</h2>
+                <!-- Image optimized under 125 kB -->
+                <img src="images/student-photo.jpg" alt="César Velasco Portrait" width="300" height="300" loading="lazy">
+            </section>
+
+            <section class="card courses-section">
+                <h2>Web Certificate Courses</h2>
+                <div class="filters">
+                    <button id="btn-all" class="filter-btn active">All</button>
+                    <button id="btn-cse" class="filter-btn">CSE</button>
+                    <button id="btn-wdd" class="filter-btn">WDD</button>
+                </div>
+                
+                <div id="courses-container" class="courses-grid">
+                    <!-- Dynamically injected via JS -->
+                </div>
+                
+                <p class="credits-display">The total credits for courses listed above is: <strong id="total-credits">0</strong></p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/cesarv143/wdd231" target="_blank" aria-label="GitHub Repository">GitHub</a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+        <p>&copy; <span id="currentyear"></span> • César Velasco • Mexico City, Mexico</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
