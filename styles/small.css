@@ -340,24 +340,54 @@ footer p {
 }
 
 
-/* Estilos básicos para el Modal nativo */
 dialog.modal {
     border: none;
     border-radius: 8px;
     padding: 0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
     max-width: 450px;
     width: 90%;
+    background-color: #f4f6f9; 
 }
 
 dialog::backdrop {
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(4px); /* Difumina el fondo para mayor elegancia */
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px); 
 }
 
 .modal-content {
     padding: 25px;
     position: relative;
+}
+
+#modal-title {
+    color: #1b365d;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    padding-right: 25px;
+}
+
+#modal-description {
+    line-height: 1.5;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.modal-content p strong {
+    color: #1b365d;
+    font-size: 1.05rem;
+}
+
+#modal-credits {
+    background-color: #ffcc00; 
+    color: #1b365d;            
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    display: inline-block;
+    margin-left: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
 #close-modal {
@@ -369,6 +399,7 @@ dialog::backdrop {
     font-size: 1.8rem;
     cursor: pointer;
     color: #888;
+    transition: color 0.2s ease;
 }
 
 #close-modal:hover {

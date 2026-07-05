@@ -7,7 +7,7 @@ const courses = [
         credits: 2,
         certificate: 'Web and Computer Programming',
         completed: true,
-        description: 'An introduction to computer programming using Python. Covers loops, variables, expressions, and fundamental control structures.'
+        description: 'This course will introduce students to programming. It will introduce the building blocks of programming languages (variables, decisions, calculations, loops, array, and input/output) and use them to solve problems.'
     },
     {
         subject: 'WDD',
@@ -34,7 +34,7 @@ const courses = [
         credits: 3,
         certificate: 'Web and Computer Programming',
         completed: true,
-        description: 'Explores basic DOM manipulation using JavaScript to handle event listeners, interactive components, and responsive updates.'
+        description: 'This course will introduce students to programming. It will introduce the building blocks of programming languages (variables, decisions, calculations, loops, array, and input/output) and use them to solve problems.'
     },
     {
         subject: 'CSE',
@@ -43,7 +43,7 @@ const courses = [
         credits: 2,
         certificate: 'Web and Computer Programming',
         completed: false,
-        description: 'Introduces Object-Oriented Programming (OOP) concepts, focusing on classes, inheritance, encapsulation, and modular design workflows.'
+        description: 'This course will introduce the notion of classes and objects. It will present encapsulation at a conceptual level. It will also work with inheritance and polymorphism.'
     },
     {
         subject: 'WDD',
@@ -68,7 +68,7 @@ function displayCourses(filteredCourses) {
         card.className = `course-card ${course.completed ? 'completed' : 'pending'}`;
         card.innerHTML = `<h3>${course.subject} ${course.number}</h3>`;
         
-        // INTERACTIVITY: Listens for clicks to open the modal dialog with unique course details
+        // Listens for clicks to open the modal dialog with unique course details
         card.addEventListener('click', () => {
             openCourseModal(course);
         });
@@ -81,7 +81,7 @@ function displayCourses(filteredCourses) {
     animateCreditsCounter(totalCredits);
 }
 
-// INTERACTIVE COMPONENT 1: Controls the native HTML5 dialog modal pop-up windows
+// Controls the native HTML5 dialog modal pop-up windows
 function openCourseModal(course) {
     const modal = document.getElementById('course-modal');
     if (!modal) return; // Safeguard if the HTML modal code hasn't been added yet
@@ -93,7 +93,7 @@ function openCourseModal(course) {
     modal.showModal();
 }
 
-// INTERACTIVE COMPONENT 2: Rolls numbers smoothly upward during changes instead of snapping instantly
+// Rolls numbers smoothly upward during changes instead of snapping instantly
 function animateCreditsCounter(targetValue) {
     let startValue = 0;
     const duration = 400; // Animation window speed in milliseconds
@@ -107,7 +107,7 @@ function animateCreditsCounter(targetValue) {
             totalCreditsEl.textContent = currentValue;
             requestAnimationFrame(updateCount);
         } else {
-            totalCreditsEl.textContent = targetValue; // Force locks exact ending calculation
+            totalCreditsEl.textContent = targetValue; 
         }
     }
     requestAnimationFrame(updateCount);
