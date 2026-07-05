@@ -70,10 +70,37 @@ img {
 /* Photo shadow and alignment details */
 .card.photo img {
     margin: 1.5rem 0; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    border: 1px solid #ccc;
+    width: 200px;         /* Forces equal width and height dimensions */
+    height: 200px;        /* Forces a square aspect ratio so border-radius works perfectly */
+    object-fit: cover;
 }
 
+
+/* Photo style: Perfect circle with frame and interactive zoom/rotation effects */
+.card.photo img {
+    margin: 1.5rem 0; 
+    width: 200px;         /* Forces equal width and height dimensions */
+    height: 200px;        /* Forces a square aspect ratio so border-radius works perfectly */
+    object-fit: cover;    /* Centers and crops the portrait inside the circle seamlessly */
+    
+    /* Perfect Circle Frame */
+    border-radius: 50%;
+    border: 4px solid #1b365d; 
+    padding: 5px;              
+    background-color: #ffffff; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+    
+    /* SMOOTH TRANSITION: Makes the hover animation incredibly smooth */
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* INTERACTIVE HOVER EFFECT: Suttle zoom and elegant rotation */
+.card.photo img:hover {
+    transform: scale(1.05) rotate(3deg); /* Gently enlarges and tilts the circle */
+    box-shadow: 0 8px 16px rgba(27, 54, 93, 0.25); /* Deepens the shadow matching your theme */
+    cursor: pointer;
+}
 
 /* Outer course container styling */
 .courses-section {
