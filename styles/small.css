@@ -1,4 +1,3 @@
-/* Typography */
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -6,12 +5,69 @@ body {
     color: #333;
 }
 
-/* Accessibility */
 main {
     padding: 1rem;
 }
 
-/* Mobile */
+/* Core Headings Styling */
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    font-weight: 700;
+}
+
+/* Main Page Title */
+h1 {
+    color: #1b365d; 
+    font-size: 2rem;
+    padding: 1rem 0;
+    border-bottom: 3px solid #ffcc00; 
+    margin-bottom: 1.5rem;
+}
+
+/* About Me, Student Photo, Web Certificate Courses */
+h2 {
+    background-color: #1b365d; 
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 4px 4px 0 0; 
+}
+
+/* General Image Fluid Behavior */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+
+.card p {
+    padding: 15px;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* The student photo card structure */
+.card.photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+/* Photo adjustments inside card */
+.card.photo img {
+    margin: 1.5rem 0; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border: 1px solid #ccc;
+    max-width: 100%;
+    height: auto;
+}
+
+
 .courses-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -42,15 +98,7 @@ main {
     border-left: 5px solid #dc3545;
 }
 
-/* Image Fluid Behavior */
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-}
-
-
-/* the filter buttons */
+/* Filter container */
 .filters {
     display: flex;
     justify-content: center;
@@ -58,7 +106,7 @@ img {
     margin: 1.5rem 0;
 }
 
-/* all filter buttons */
+/* All filter buttons */
 .filter-btn {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.95rem;
@@ -92,60 +140,6 @@ img {
 }
 
 
-/* Core Headings Styling */
-h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    font-weight: 700;
-}
-
-/* Main Page Title */
-h1 {
-    color: #1b365d; 
-    font-size: 2rem;
-    padding: 1rem 0;
-    border-bottom: 3px solid #ffcc00; /* Contrast accent line */
-    margin-bottom: 1.5rem;
-}
-
-/* About Me, Student Photo, Web Certificate Courses */
-h2 {
-    background-color: #1b365d; 
-    color: #ffffff;
-    font-size: 1.2rem;
-    padding: 10px 15px;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    border-radius: 4px 4px 0 0; 
-}
-
-/* Card content spacing adjustment */
-.card p {
-    padding: 15px;
-    margin: 0;
-    line-height: 1.6;
-}
-
-
-/* the student photo */
-.card.photo {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-}
-
-/* Photo adjustments */
-.card.photo img {
-    margin: 1.5rem 0; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    border: 1px solid #ccc;
-    max-width: 100%;
-    height: auto;
-}
-
-
-/* Header Base Layout */
 header {
     background-color: #1b365d; 
     color: #ffffff;
@@ -217,19 +211,16 @@ header {
 }
 
 
-
-
-/* Footer Layout Base */
 footer {
     background-color: #1b365d; 
     color: #ffffff;
     text-align: center;
     padding: 1.5rem 1rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     border-top: 4px solid #ffcc00; 
 }
 
-/* Social Media Link */
+/* Social Media Link Container */
 .social-links {
     display: flex;
     justify-content: center;
@@ -249,19 +240,14 @@ footer {
     transition: all 0.3s ease;
 }
 
+/* Clean hover state changing to a solid navy background */
 .social-links a:hover {
     background-color: #1b365d;
     color: #ffffff;
+    border-color: #1b365d;
 }
 
-/* links */
-.social-links a:hover {
-    background-color: #ffffff;
-    color: #1b365d;
-    border-color: #ffffff;
-}
-
-/* Copyright */
+/* Copyright Text Styling */
 footer p {
     margin: 0.5rem 0 0 0;
     font-size: 0.85rem;
@@ -269,8 +255,47 @@ footer p {
     letter-spacing: 0.5px;
 }
 
-/* modification text */
+/* Modification text highlight */
 #lastModified {
     color: #ffcc00; 
     font-weight: bold;
+}
+
+
+@media (min-width: 600px) {
+
+    .grid-container {
+        display: flex !important; 
+        flex-direction: row !important; 
+        justify-content: center !important; 
+        gap: 20px !important; /* Controlled layout gap between the text and photo */
+        align-items: start !important;
+        margin: 2rem auto !important;
+        width: 100% !important; 
+    }
+
+    /* About Card: limits max-width to prevent massive layout blank spaces */
+    .card.about {
+        max-width: 480px !important; 
+        width: 100% !important;
+        margin: 0 !important; 
+    }    
+
+    /* Photo Card: overrides mobile flex properties to snap right next to the text */
+    .card.photo {
+        display: block !important; 
+        flex: 0 0 auto !important; 
+        max-width: 240px !important;
+        margin: 0 !important; 
+    }
+
+    /* Reduces image margins inside desktop view for symmetrical alignment */
+    .card.photo img {
+        margin: 15px auto !important; 
+    }
+
+    /* Forces the lower courses section to expand full width seamlessly */
+    .courses-container {
+        width: 100% !important;
+    }
 }

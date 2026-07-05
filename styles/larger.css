@@ -1,0 +1,29 @@
+@media (min-width: 768px) {
+    /* Contenedor principal: une y centra ambas tarjetas al medio */
+    .grid-container {
+        display: flex; 
+        justify-content: center;
+        gap: 15px; /* Esta es la única distancia real que existirá entre el texto y la foto */
+        align-items: start;
+        margin-bottom: 2.5rem;
+        width: 100%; 
+    }
+
+    /* Tarjeta sobre mí: se limita su ancho máximo para que no se estire */
+    .card.about {
+        max-width: 500px;
+        width: 100%;
+        margin: 0; /* Elimina márgenes externos heredados que empujan el bloque */
+    }    
+
+    /* Tarjeta de la foto: se mantiene compacta alrededor de la imagen */
+    .card.photo {
+        flex: 0 0 auto;
+        margin: 0; /* Elimina márgenes externos heredados que empujan la foto hacia la derecha */
+    }
+
+    /* Contenedor de cursos: ocupa todo el ancho disponible debajo de las tarjetas */
+    .courses-container {
+        width: 100%;
+    }
+}
