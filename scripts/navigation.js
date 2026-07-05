@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
     menuButton.addEventListener("click", () => {
         navMenu.classList.toggle("open");
         
-        // Cambia el icono de hamburguesa a una X al abrirse
+        /* menu opens */
         if (navMenu.classList.contains("open")) {
-            menuButton.textContent = "▲";
+            menuButton.textContent = "▲"; /* Clean, clear close character */
             menuButton.setAttribute("aria-label", "Close menu");
         } else {
             menuButton.textContent = "☰";

@@ -1,29 +1,50 @@
+/* ==========================================================================
+   1. RESPONSIVE DESIGN FOR DESKTOP & PC LAYOUTS (CHROME & EDGE UNIFIED)
+   ========================================================================== */
+
 @media (min-width: 768px) {
-    /* Contenedor principal: une y centra ambas tarjetas al medio */
+    /* Main container: centers the joined blocks and completely removes layout gaps */
     .grid-container {
-        display: flex; 
-        justify-content: center;
-        gap: 15px; /* Esta es la única distancia real que existirá entre el texto y la foto */
-        align-items: start;
-        margin-bottom: 2.5rem;
-        width: 100%; 
+        display: flex !important; 
+        flex-direction: row !important;
+        flex-wrap: nowrap !important; /* Prevents browsers from pushing the photo card to a new line */
+        justify-content: center !important; 
+        gap: 0px !important; /* Forces the structural gap to be zero pixels wide */
+        align-items: stretch !important; /* Synchronizes the height of both cards perfectly */
+        margin: 2rem auto !important; /* Centers the whole block horizontally on screen */
+        width: 100% !important; 
+        max-width: 760px !important; /* Locks down width dimensions to stay compact */
     }
 
-    /* Tarjeta sobre mí: se limita su ancho máximo para que no se estire */
+    /* About Me card: strictly occupies 70% of the horizontal space */
     .card.about {
-        max-width: 500px;
-        width: 100%;
-        margin: 0; /* Elimina márgenes externos heredados que empujan el bloque */
+        flex: 0 0 70% !important;
+        width: 70% !important;
+        max-width: 70% !important;
+        margin: 0 !important; 
+        padding: 0 !important;
     }    
 
-    /* Tarjeta de la foto: se mantiene compacta alrededor de la imagen */
+    /* Student Photo card: occupies the remaining 30% and clips the Edge rendering gap */
     .card.photo {
-        flex: 0 0 auto;
-        margin: 0; /* Elimina márgenes externos heredados que empujan la foto hacia la derecha */
+        display: block !important;
+        flex: 0 0 30% !important;
+        width: 30% !important;
+        max-width: 30% !important;
+        margin: 0 0 0 -1px !important; /* Shifts card left by 1px to close Edge subpixel rendering lines */
+        padding: 0 !important;
     }
 
-    /* Contenedor de cursos: ocupa todo el ancho disponible debajo de las tarjetas */
-    .courses-container {
-        width: 100%;
+    /* Centers image positioning and stops portrait overflowing inside desktop views */
+    .card.photo img {
+        margin: 15px auto !important; 
+        display: block !important;
+        max-width: 90% !important; 
+    }
+
+    /* Web Certificate Courses: stays clean and stretches full width underneath */
+    .courses-section {
+        width: 100% !important;
+        clear: both !important;
     }
 }

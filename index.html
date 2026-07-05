@@ -23,7 +23,6 @@
 <body>
     <header>
         <div class="logo-area">
-            
             <svg class="logo" width="40" height="40" viewBox="0 0 100 100">
                 <circle cx="50" cy="50" r="40" fill="#1b365d"/>
                 <text x="50" y="55" fill="white" font-size="20" text-anchor="middle">WDD</text>
@@ -40,6 +39,8 @@
 
     <main>
         <h1>Home</h1>
+        
+        <!-- About Me and Student Photo wrapper -->
         <div class="grid-container">
             <section class="card about">
                 <h2>About Me</h2>
@@ -48,32 +49,33 @@
 
             <section class="card photo">
                 <h2>Student Photo</h2>
-                
                 <img src="images/ce.jpg" alt="César Velasco Portrait" width="200" height="250" loading="lazy">
             </section>
         </div>
-            <section class="card courses-section">
-                <h2>Web Certificate Courses</h2>
-                <div class="filters">
-                    <button id="btn-all" class="filter-btn active">All</button>
-                    <button id="btn-cse" class="filter-btn">CSE</button>
-                    <button id="btn-wdd" class="filter-btn">WDD</button>
-                </div>
-                
-                <div id="courses-container" class="courses-grid">
-                    
-                </div>
-                
-                <p class="credits-display">The total credits for courses listed above is: <strong id="total-credits">0</strong></p>
-            </section>
-        </div>
+
+        <!-- Web Certificate Courses Section -->
+        <section class="card courses-section">
+            <h2>Web Certificate Courses</h2>
+            <div class="filters">
+                <button id="btn-all" class="filter-btn active">All</button>
+                <button id="btn-cse" class="filter-btn">CSE</button>
+                <button id="btn-wdd" class="filter-btn">WDD</button>
+            </div>
+            
+            <div id="courses-container" class="courses-grid">
+                <!-- Courses injected dynamically -->
+            </div>
+            
+            <p class="credits-display">The total credits for courses listed above is: <strong id="total-credits">0</strong></p>
+        </section>
     </main>
+
     <div class="social-links">
-            <a href="https://github.com/cesarv143/wdd231" target="_blank" aria-label="GitHub Repository">GitHub</a>
-            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">LinkedIn</a>
-        </div>
+        <a href="https://github.com/cesarv143/wdd231" target="_blank" aria-label="GitHub Repository">GitHub</a>
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+    </div>
+
     <footer>
-        
         <p>&copy; <span id="currentyear"></span> • César Velasco • Mexico City, Mexico</p>
         <p id="lastModified"></p>
     </footer>

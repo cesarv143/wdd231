@@ -21,11 +21,11 @@ h1 {
     color: #1b365d; 
     font-size: 2rem;
     padding: 1rem 0;
-    border-bottom: 3px solid #ffcc00; 
+    border-bottom: 3px solid #ffcc00; /* Contrast accent line */
     margin-bottom: 1.5rem;
 }
 
-/* About Me, Student Photo, Web Certificate Courses */
+/* Universal Card Section Headers */
 h2 {
     background-color: #1b365d; 
     color: #ffffff;
@@ -37,7 +37,7 @@ h2 {
     border-radius: 4px 4px 0 0; 
 }
 
-/* General Image Fluid Behavior */
+/* Fluid Behavior for General Images */
 img {
     max-width: 100%;
     height: auto;
@@ -45,37 +45,52 @@ img {
 }
 
 
+/* Mobile Default: Forces layout cards to stack vertically on small screens */
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 1.5rem;
+}
+
+/* Card inner text spacing adjustment */
 .card p {
     padding: 15px;
     margin: 0;
     line-height: 1.6;
 }
 
-/* The student photo card structure */
+/* Student photo mobile layout wrapper */
 .card.photo {
     display: flex;
     flex-direction: column;
     align-items: center; 
 }
 
-/* Photo adjustments inside card */
+/* Photo shadow and alignment details */
 .card.photo img {
     margin: 1.5rem 0; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     border: 1px solid #ccc;
-    max-width: 100%;
-    height: auto;
 }
 
 
+/* Outer course container styling */
+.courses-section {
+    margin-top: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Course Grid for cards */
 .courses-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 12px;
-    margin: 1.5rem 0;
+    padding: 15px;
 }
 
-/* Standard Course Card Styles */
+/* Individual Course Card Design */
 .course-card {
     padding: 15px;
     text-align: center;
@@ -85,17 +100,25 @@ img {
     transition: transform 0.2s ease;
 }
 
-/* Status Differentiation Principles */
+/* Status: Completed Courses */
 .course-card.completed {
     background-color: #d4edda; 
     color: #155724;
     border-left: 5px solid #28a745;
 }
 
+/* Status: Pending Courses */
 .course-card.pending {
     background-color: #f8d7da; 
     color: #721c24;
     border-left: 5px solid #dc3545;
+}
+
+/* Course credit summary text */
+.credits-display {
+    padding: 0 15px 15px 15px;
+    margin: 0;
+    font-weight: 600;
 }
 
 /* Filter container */
@@ -104,9 +127,10 @@ img {
     justify-content: center;
     gap: 10px;
     margin: 1.5rem 0;
+    padding: 0 15px;
 }
 
-/* All filter buttons */
+/* Filter interactive buttons */
 .filter-btn {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.95rem;
@@ -120,20 +144,17 @@ img {
     transition: all 0.3s ease; 
 }
 
-/* Hover effect for a premium feel */
 .filter-btn:hover {
     background-color: rgba(27, 54, 93, 0.1); 
     transform: translateY(-1px); 
 }
 
-/* Active / Selected button style */
 .filter-btn.active {
     background-color: #1b365d;
     color: #ffffff;
     box-shadow: 0 4px 6px rgba(27, 54, 93, 0.2);
 }
 
-/* Focus indicator */
 .filter-btn:focus-visible {
     outline: 3px solid #ffcc00; 
     outline-offset: 2px;
@@ -150,7 +171,6 @@ header {
     position: relative;
 }
 
-/* Logo and Profile */
 .logo-area {
     display: flex;
     align-items: center;
@@ -159,7 +179,7 @@ header {
     font-size: 1.1rem;
 }
 
-/* Hamburger Button Styling */
+/* Mobile Hamburger Menu Trigger Button */
 #menu-button {
     background: none;
     border: none;
@@ -174,7 +194,7 @@ header {
     color: #ffcc00; 
 }
 
-/* Mobile Navigation Menu Layout */
+/* Mobile Navigation Dropdown Box */
 #nav-menu {
     display: none; 
     flex-direction: column;
@@ -187,12 +207,12 @@ header {
     z-index: 1000;
 }
 
-/* Universal display */
+/* Menu Toggle class controlled via JS navigation script */
 #nav-menu.open {
     display: flex;
 }
 
-/* Navigation Links */
+/* Nav Menu Item Links */
 #nav-menu a {
     display: block;
     color: #ffffff;
@@ -203,7 +223,6 @@ header {
     transition: all 0.3s ease;
 }
 
-/* Wayfinding and Interactive States */
 #nav-menu a:hover, 
 #nav-menu a.active {
     background-color: #ffffff;
@@ -211,24 +230,13 @@ header {
 }
 
 
-footer {
-    background-color: #1b365d; 
-    color: #ffffff;
-    text-align: center;
-    padding: 1.5rem 1rem;
-    margin-top: 1rem;
-    border-top: 4px solid #ffcc00; 
-}
-
-/* Social Media Link Container */
 .social-links {
     display: flex;
     justify-content: center;
     gap: 35px;
-    margin-bottom: 1.5rem;
+    margin: 1.5rem 0;
 }
 
-/* Links for GitHub and LinkedIn */
 .social-links a {
     color: #1b365d;
     text-decoration: none;
@@ -240,14 +248,20 @@ footer {
     transition: all 0.3s ease;
 }
 
-/* Clean hover state changing to a solid navy background */
 .social-links a:hover {
     background-color: #1b365d;
     color: #ffffff;
     border-color: #1b365d;
 }
 
-/* Copyright Text Styling */
+footer {
+    background-color: #1b365d; 
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    border-top: 4px solid #ffcc00; 
+}
+
 footer p {
     margin: 0.5rem 0 0 0;
     font-size: 0.85rem;
@@ -255,47 +269,8 @@ footer p {
     letter-spacing: 0.5px;
 }
 
-/* Modification text highlight */
+/* Highlight style for page timestamp */
 #lastModified {
     color: #ffcc00; 
     font-weight: bold;
-}
-
-
-@media (min-width: 600px) {
-
-    .grid-container {
-        display: flex !important; 
-        flex-direction: row !important; 
-        justify-content: center !important; 
-        gap: 20px !important; /* Controlled layout gap between the text and photo */
-        align-items: start !important;
-        margin: 2rem auto !important;
-        width: 100% !important; 
-    }
-
-    /* About Card: limits max-width to prevent massive layout blank spaces */
-    .card.about {
-        max-width: 480px !important; 
-        width: 100% !important;
-        margin: 0 !important; 
-    }    
-
-    /* Photo Card: overrides mobile flex properties to snap right next to the text */
-    .card.photo {
-        display: block !important; 
-        flex: 0 0 auto !important; 
-        max-width: 240px !important;
-        margin: 0 !important; 
-    }
-
-    /* Reduces image margins inside desktop view for symmetrical alignment */
-    .card.photo img {
-        margin: 15px auto !important; 
-    }
-
-    /* Forces the lower courses section to expand full width seamlessly */
-    .courses-container {
-        width: 100% !important;
-    }
 }
