@@ -45,7 +45,7 @@ img {
 }
 
 
-/* Mobile Default: Forces layout cards to stack vertically on small screens */
+/* Mobile Default: small screens */
 .grid-container {
     display: flex;
     flex-direction: column;
