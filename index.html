@@ -7,7 +7,6 @@
     <meta name="description" content="WDD 231 Advanced Web Frontend Development - Course Home Page for César Velasco.">
     <meta name="author" content="César Velasco">
     
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
@@ -15,7 +14,6 @@
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
     
-    <!-- Deferred Scripts -->
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
     <script src="scripts/course.js" defer></script>
@@ -40,7 +38,6 @@
     <main>
         <h1>Home</h1>
         
-        <!-- About Me and Student Photo wrapper -->
         <div class="grid-container">
             <section class="card about">
                 <h2>About Me</h2>
@@ -49,11 +46,10 @@
 
             <section class="card photo">
                 <h2>Student Photo</h2>
-                <img src="images/ce2.jpg" alt="César Velasco Portrait" width="200" height="250" loading="lazy">
+                <img src="images/ce2.jpg" alt="César Velasco Portrait" width="200" height="200" loading="lazy">
             </section>
         </div>
 
-        <!-- Web Certificate Courses Section -->
         <section class="card courses-section">
             <h2>Web Certificate Courses</h2>
             <div class="filters">
@@ -63,31 +59,28 @@
             </div>
             
             <div id="courses-container" class="courses-grid">
-                <!-- Courses injected dynamically -->
-            </div>
+                </div>
             
             <p class="credits-display">The total credits for courses listed above is: <strong id="total-credits">0</strong></p>
         </section>
     </main>
 
-    <div class="social-links">
-        <a href="https://github.com/cesarv143/wdd231" target="_blank" aria-label="GitHub Repository">GitHub</a>
-        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">LinkedIn</a>
-    </div>
-
     <footer>
+        <div class="social-links">
+            <a href="https://github.com/cesarv143/wdd231" target="_blank" aria-label="GitHub Repository">GitHub</a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+        </div>
         <p>&copy; <span id="currentyear"></span> • César Velasco • Mexico City, Mexico</p>
         <p id="lastModified"></p>
     </footer>
 
-    
-<dialog id="course-modal" class="modal">
-    <div class="modal-content">
-        <button id="close-modal" aria-label="Close details">×</button>
-        <h3 id="modal-title">Course Title</h3>
-        <p id="modal-description">Course descriptions will appear here dynamically.</p>
-        <p><strong>Credits:</strong> <span id="modal-credits">0</span></p>
-    </div>
-</dialog>
+    <dialog id="course-modal" class="modal">
+        <div class="modal-content">
+            <button id="close-modal" aria-label="Close details">×</button>
+            <h3 id="modal-title">Course Title</h3>
+            <p id="modal-description">Course descriptions will appear here dynamically.</p>
+            <p><strong>Credits:</strong> <span id="modal-credits">0</span></p>
+        </div>
+    </dialog>
 </body>
 </html>

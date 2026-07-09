@@ -298,16 +298,16 @@ header {
     display: flex;
     justify-content: center;
     gap: 35px;
-    margin: 1.5rem 0;
+    margin: 0 0 1.5rem 0;
 }
 
 .social-links a {
-    color: #1b365d;
+    color: #ffcc00;
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9rem;
     padding: 8px 16px;
-    border: 1px solid #1b365d;
+    border: 1px solid #ffcc00;
     border-radius: 4px;
     transition: all 0.3s ease;
 }
