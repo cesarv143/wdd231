@@ -2,37 +2,37 @@
   {
     "name": "Apex Digital Solutions",
     "tagline": "Advanced Cloud Systems & Automation",
-    "email": "info@apexdigital.example.com",
-    "phone": "800-555-0192",
-    "website": "https://apex-digitalsolutions.example.com",
-    "image": "images/apex-logo.webp",
+    "email": "support@apexdigital.com",
+    "phone": "+1 2482709670",
+    "website": "https://apexdigital.com/",
+    "image": "images/apexdigital.jpg",
     "membershipLevel": 3
   },
   {
     "name": "Summit Financial Group",
     "tagline": "Strategic Wealth & Tax Management",
-    "email": "contact@summitfinancial.example.com",
-    "phone": "800-555-0149",
-    "website": "https://summit-financial.example.com",
-    "image": "images/summit-logo.webp",
+    "email": "info@yoursummit.com",
+    "phone": "8004750991",
+    "website": "https://yoursummit.com/",
+    "image": "images/summer.jpg",
     "membershipLevel": 2
   },
   {
     "name": "GreenLife Organic Market",
     "tagline": "Sustainable Groceries & Eco Goods",
-    "email": "support@greenlifemarket.example.com",
-    "phone": "800-555-0174",
-    "website": "https://greenlife-market.example.com",
-    "image": "images/greenlife-logo.webp",
+    "email": "info@greenlifemarket.com",
+    "phone": "973-283-8322",
+    "website": "https://www.greenlifemarket.com/",
+    "image": "images/greenlife.jpg",
     "membershipLevel": 1
   },
   {
     "name": "Horizon Architecture",
     "tagline": "Contemporary & Sustainable Spaces",
-    "email": "hello@horizonarchitecture.example.com",
-    "phone": "800-555-0123",
-    "website": "https://horizon-architecture.example.com",
-    "image": "images/horizon-logo.webp",
+    "email": "michael@horizon-architecture.com",
+    "phone": "(563) 506-4965",
+    "website": "https://horizon-architecture.com/",
+    "image": "images/horizon.jpg",
     "membershipLevel": 3
   },
   {
@@ -40,26 +40,26 @@
     "tagline": "Global Supply Chain Management",
     "email": "shipping@vanguardlogistics.example.com",
     "phone": "800-555-0158",
-    "website": "https://vanguard-logistics.example.com",
-    "image": "images/vanguard-logo.webp",
+    "website": "https://bluewavecoffeeshop.myshopify.com/",
+    "image": "images/vanguard.jpg",
     "membershipLevel": 2
   },
   {
     "name": "BlueWave Coffee Roasters",
     "tagline": "Premium Small-Batch Fair Trade",
-    "email": "roastery@bluewavecoffee.example.com",
-    "phone": "800-555-0115",
-    "website": "https://bluewave-coffee.example.com",
-    "image": "images/bluewave-logo.webp",
+    "email": "bluewavecoffee.com",
+    "phone": "863-889-376",
+    "website": "https://bluewavecoffeeshop.myshopify.com/",
+    "image": "images/bluewave.jpg",
     "membershipLevel": 1
   },
   {
     "name": "Nova Health & Wellness",
     "tagline": "Holistic Care & Personalized Nutrition",
-    "email": "care@novawellness.example.com",
-    "phone": "800-555-0167",
-    "website": "https://nova-wellness.example.com",
-    "image": "images/nova-logo.webp",
+    "email": "novawellness@care.com",
+    "phone": "561 324-6155",
+    "website": "https://novahealthandwellness.org/",
+    "image": "images/nova.jpg",
     "membershipLevel": 3
   }
 ]
