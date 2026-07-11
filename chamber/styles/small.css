@@ -1,0 +1,330 @@
+/* ==========================================================================
+   COLORIMETRY & PALETTE DEFINITIONS (60-30-10 Rule)
+   ========================================================================== */
+:root {
+    --primary-color: #0d2c54;    /* 30% - Deep Navy (Trust, Professionalism) */
+    --secondary-color: #c9a66b;  /* Sandy Gold (Warmth, Community heritage) */
+    --background-color: #fafdff; /* 60% - Soft Clean White (Dominant background) */
+    --surface-color: #ffffff;    /* Card & structural container background */
+    --text-dark: #1a1a1a;        /* High contrast primary text */
+    --text-light: #ffffff;       /* Text over dark backgrounds */
+    --accent-color: #d64527;     /* 10% - Terracotta Orange (Call to actions / Badges) */
+    --border-color: #e2e8f0;     /* Subtle divider colors */
+    --zebra-color: #f1f5f9;      /* Light gray-blue for row striping */
+}
+
+/* General Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-dark);
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   HEADER & NAVIGATION
+   ========================================================================== */
+header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 1.2rem 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-area h1 {
+    font-size: 1.5rem;
+    color: var(--text-light);
+    letter-spacing: 0.5px;
+}
+
+/* Navigation Links */
+#nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#nav-menu a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0.8rem;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 4px;
+}
+
+#nav-menu a:hover, #nav-menu a.active {
+    color: var(--text-light);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* Main Content Headings */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+main h2 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid var(--secondary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* ==========================================================================
+   VIEW TOGGLE BUTTONS
+   ========================================================================== */
+.menu {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.menu button {
+    padding: 0.6rem 1.8rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: var(--surface-color);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.menu button.active {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.menu button:hover:not(.active) {
+    background-color: #f0f4f8;
+}
+
+/* ==========================================================================
+   GRID VIEW PATTERN (Cards)
+   ========================================================================== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 25px;
+}
+
+.grid .member-card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.grid .member-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(13, 44, 84, 0.08);
+}
+
+.grid .card-header {
+    background-color: #f8fafc;
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px;
+    text-align: center;
+}
+
+.grid .card-header h3 {
+    font-size: 1.35rem;
+    color: var(--primary-color);
+    margin-bottom: 4px;
+}
+
+.grid .card-header .tagline {
+    font-size: 0.88rem;
+    color: #64748b;
+    font-style: italic;
+}
+
+.grid .card-body {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.grid .image-box {
+    width: 95px;
+    height: 95px;
+    background-color: #f1f5f9;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.grid .image-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.grid .info-text {
+    font-size: 0.9rem;
+    color: #334155;
+}
+
+.grid .info-text p {
+    margin: 6px 0;
+}
+
+.grid .info-text strong {
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+.grid .info-text a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.grid .info-text a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   LIST VIEW PATTERN (Linear Rows)
+   ========================================================================== */
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.list .member-card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 15px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.list .image-box {
+    display: none; /* Crucial structural requirement from class example */
+}
+
+.list .card-header {
+    border-bottom: none;
+    padding: 0;
+}
+
+.list .card-header h3 {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.list .card-header .tagline {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.list .info-text {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    font-size: 0.9rem;
+}
+
+.list .info-text p {
+    margin: 0;
+}
+
+.list .info-text a {
+    color: var(--accent-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.list .member-card:nth-child(even) {
+    background-color: var(--zebra-color);
+}
+
+/* ==========================================================================
+   FOOTER STYLE
+   ========================================================================== */
+footer {
+    background-color: var(--primary-color);
+    color: #e2e8f0;
+    border-top: 4px solid var(--secondary-color);
+    padding: 2.5rem 1rem;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+}
+
+footer strong {
+    color: var(--text-light);
+}
+
+footer a, .footer-center .social-icon {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0 8px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+footer a:hover, .footer-center .social-icon:hover {
+    color: var(--text-light);
+}
+
+footer .footer-right p {
+    margin: 4px 0;
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
