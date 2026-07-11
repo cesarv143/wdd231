@@ -1,16 +1,14 @@
-/* ==========================================================================
-   COLORIMETRY & PALETTE DEFINITIONS (60-30-10 Rule)
-   ========================================================================== */
+/* COLORIMETRY */
 :root {
-    --primary-color: #0d2c54;    /* 30% - Deep Navy (Trust, Professionalism) */
-    --secondary-color: #c9a66b;  /* Sandy Gold (Warmth, Community heritage) */
-    --background-color: #fafdff; /* 60% - Soft Clean White (Dominant background) */
+    --primary-color: #0d2c54;    
+    --secondary-color: #c9a66b;  
+    --background-color: #fafdff; 
     --surface-color: #ffffff;    /* Card & structural container background */
-    --text-dark: #1a1a1a;        /* High contrast primary text */
-    --text-light: #ffffff;       /* Text over dark backgrounds */
-    --accent-color: #d64527;     /* 10% - Terracotta Orange (Call to actions / Badges) */
+    --text-dark: #1a1a1a;        
+    --text-light: #ffffff;       
+    --accent-color: #d64527;     /* Call to actions / Badges */
     --border-color: #e2e8f0;     /* Subtle divider colors */
-    --zebra-color: #f1f5f9;      /* Light gray-blue for row striping */
+    --zebra-color: #f1f5f9;      /*  row striping */
 }
 
 /* General Resets */
@@ -27,9 +25,7 @@ body {
     line-height: 1.5;
 }
 
-/* ==========================================================================
-   HEADER & NAVIGATION
-   ========================================================================== */
+/* HEADER & NAVIGATION */
 header {
     background-color: var(--primary-color);
     color: var(--text-light);
@@ -103,9 +99,7 @@ main h2 {
     padding-bottom: 5px;
 }
 
-/* ==========================================================================
-   VIEW TOGGLE BUTTONS
-   ========================================================================== */
+/* VIEW TOGGLE BUTTONS */
 .menu {
     margin-bottom: 2rem;
     display: flex;
@@ -134,9 +128,7 @@ main h2 {
     background-color: #f0f4f8;
 }
 
-/* ==========================================================================
-   GRID VIEW PATTERN (Cards)
-   ========================================================================== */
+/* GRID VIEW PATTERN, Cards */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -230,9 +222,7 @@ main h2 {
     text-decoration: underline;
 }
 
-/* ==========================================================================
-   LIST VIEW PATTERN (Linear Rows)
-   ========================================================================== */
+/*  LIST VIEW PATTERN (Linear Rows) */
 .list {
     display: flex;
     flex-direction: column;
@@ -292,9 +282,7 @@ main h2 {
     background-color: var(--zebra-color);
 }
 
-/* ==========================================================================
-   FOOTER BASE (Mobile First - Una sola columna centrada)
-   ========================================================================== */
+/*  FOOTER BASE Mobile First */
 footer {
     background-color: var(--primary-color);
     color: #e2e8f0;
@@ -302,9 +290,9 @@ footer {
     padding: 2rem 1rem;
     margin-top: 4rem;
     display: flex;
-    flex-direction: column;   /* En móvil van hacia abajo */
+    flex-direction: column;   
     gap: 25px;
-    text-align: center;       /* Centrado en pantallas pequeñas */
+    text-align: center;       /* Focused on small screens */
 }
 
 footer .footer-left p {
@@ -318,13 +306,21 @@ footer .footer-center {
 }
 
 footer .footer-center .social-icon {
-    font-size: 1.8rem;        /* Iconos más visibles */
+   width: 45px;               /* size */
+    height: 45px;              
+    
+    /* border */
+    border-radius: 10px;       
+    
+    
+    object-fit: contain;       
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: transform 0.2s ease, filter 0.2s ease
 }
 
 footer .footer-center .social-icon:hover {
     transform: scale(1.1);
+    filter: brightness(1.15);  /* glow */
 }
 
 footer .footer-right p {
@@ -333,35 +329,34 @@ footer .footer-right p {
     color: #94a3b8;
 }
 
-/* ==========================================================================
-   DESKTOP VIEW (Para pantallas grandes - Tres columnas alineadas)
-   ========================================================================== */
+/* Three aligned columns */
 @media (min-width: 768px) {
     footer {
-        flex-direction: row;      /* Cambia a filas (lado a lado) */
+        flex-direction: row;      
         justify-content: space-between;
-        align-items: center;      /* Centra verticalmente los elementos */
+        align-items: center;      
         padding: 2.5rem 3rem;
     }
 
-    /* Cada bloque toma un espacio equitativo */
+    /* equitable space */
     footer .footer-left,
     footer .footer-center,
     footer .footer-right {
         flex: 1;
     }
 
-    /* Alineaciones específicas del Wireframe */
+    /* Wireframe */
     footer .footer-left {
-        text-align: left;         /* Texto a la izquierda */
+        text-align: left;         /* Text on the left */
+
     }
 
     footer .footer-center {
         display: flex;
-        justify-content: center;  /* Iconos estrictamente en el centro */
+        justify-content: center;  /* Iconos center */
     }
 
     footer .footer-right {
-        text-align: right;        /* Créditos e información a la derecha */
+        text-align: right;        
     }
 }
