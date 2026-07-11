@@ -74,7 +74,7 @@ header {
 
 #nav-menu a:hover, #nav-menu a.active {
     color: var(--text-light);
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--secondary-color);
 }
 
 /* Main Content Headings */
