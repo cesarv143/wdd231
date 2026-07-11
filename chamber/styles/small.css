@@ -8,7 +8,8 @@
     --text-light: #ffffff;       
     --accent-color: #d64527;     /* Call to actions / Badges */
     --border-color: #e2e8f0;     /* Subtle divider colors */
-    --zebra-color: #f1f5f9;      /*  row striping */
+    --zebra-color: #f1f5f9;      /* Row striping */
+    --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 /* General Resets */
@@ -30,7 +31,7 @@ header {
     background-color: var(--primary-color);
     color: var(--text-light);
     padding: 1.2rem 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px var(--shadow-color);
 }
 
 .header-container {
@@ -76,13 +77,6 @@ header {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-#theme-toggle {
-    background: none;
-    border: none;
-    font-size: 1.2rem;
-    cursor: pointer;
-}
-
 /* Main Content Headings */
 main {
     max-width: 1200px;
@@ -125,7 +119,7 @@ main h2 {
 }
 
 .menu button:hover:not(.active) {
-    background-color: #f0f4f8;
+    background-color: var(--zebra-color);
 }
 
 .grid {
@@ -171,38 +165,37 @@ main h2 {
 
 .grid .card-body {
     display: flex;
-    flex-direction: column;    /* Stacks elements vertically */
-    align-items: center;       /* Centers elements horizontally inside the card */
-    text-align: center;        /* Centers all text lines */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     padding: 20px;
-    gap: 15px;                 /* Clean vertical spacing */
+    gap: 15px;
     flex-grow: 1;
 }
 
-/*  vertical layout */
 .grid .image-box {
-    width: 140px;          
-    height: 90px;          
-    background-color: #f1f5f9; 
+    width: 140px;
+    height: 90px;
+    background-color: var(--zebra-color);
     border-radius: 8px;
     border: 1px solid var(--border-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;    
+    overflow: hidden;
     padding: 5px;
 }
 
 .grid .image-box img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain;   
+    object-fit: contain;
 }
 
 .grid .info-text {
     font-size: 0.9rem;
     color: #334155;
-    width: 100%;               /* Ensures full click area distribution */
+    width: 100%;
 }
 
 .grid .info-text p {
@@ -225,7 +218,7 @@ main h2 {
     text-decoration: underline;
 }
 
-/*  Linear Rows Untouched*/
+/* Linear Rows */
 .list {
     display: flex;
     flex-direction: column;
@@ -243,7 +236,7 @@ main h2 {
 }
 
 .list .image-box {
-    display: none; /* Crucial structural requirement from class example */
+    display: none;
 }
 
 .list .card-header {
@@ -285,7 +278,7 @@ main h2 {
     background-color: var(--zebra-color);
 }
 
-/*  FOOTER BASE Mobile First */
+/* FOOTER */
 footer {
     background-color: var(--primary-color);
     color: #e2e8f0;
@@ -293,9 +286,9 @@ footer {
     padding: 2rem 1rem;
     margin-top: 4rem;
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
     gap: 25px;
-    text-align: center;       /* Focused on small screens */
+    text-align: center;
 }
 
 footer .footer-left p {
@@ -309,21 +302,17 @@ footer .footer-center {
 }
 
 footer .footer-center .social-icon {
-   width: 45px;               /* size */
-    height: 45px;              
-    
-    /* border */
-    border-radius: 10px;       
-    
-    
-    object-fit: contain;       
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    object-fit: contain;
     cursor: pointer;
-    transition: transform 0.2s ease, filter 0.2s ease
+    transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 footer .footer-center .social-icon:hover {
     transform: scale(1.1);
-    filter: brightness(1.15);  /* glow */
+    filter: brightness(1.15);
 }
 
 footer .footer-right p {
@@ -332,67 +321,59 @@ footer .footer-right p {
     color: #94a3b8;
 }
 
-/* Three aligned columns */
+/* Responsive Footer */
 @media (min-width: 768px) {
     footer {
-        flex-direction: row;      
+        flex-direction: row;
         justify-content: space-between;
-        align-items: center;      
+        align-items: center;
         padding: 2.5rem 3rem;
     }
-    
 
-    /* equitable space */
     footer .footer-left,
     footer .footer-center,
     footer .footer-right {
         flex: 1;
     }
 
-    /* Wireframe */
     footer .footer-left {
-        text-align: left;         /* Text on the left */
-
+        text-align: left;
     }
 
     footer .footer-center {
         display: flex;
-        justify-content: center;  /* Iconos center */
+        justify-content: center;
     }
 
     footer .footer-right {
-        text-align: right;        
+        text-align: right;
     }
+}
 
-
-
-    /* switch */
+/* Switch */
 .switch {
     position: relative;
     display: inline-block;
     width: 50px;
     height: 26px;
-    align-self: center; 
+    align-self: center;
 }
 
-/* Hide the native checkbox */
-.switch input { 
+.switch input {
     opacity: 0;
     width: 0;
     height: 0;
 }
 
-/* The bottom of the switch */
 .slider {
     position: absolute;
     cursor: pointer;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(255, 255, 255, 0.2); /* Color sutil en modo claro */
+    background-color: rgba(255, 255, 255, 0.2);
     border: 1px solid var(--secondary-color);
     transition: .4s;
 }
 
-/* The inner circle */
 .slider:before {
     position: absolute;
     content: "";
@@ -404,23 +385,19 @@ footer .footer-right p {
     transition: .4s;
 }
 
-/* When activated, the background changes to a gold color. */
 input:checked + .slider {
     background-color: var(--secondary-color);
 }
 
-/* When activated, the inner circle changes to blue and moves to the right. */
 input:checked + .slider:before {
     transform: translateX(24px);
     background-color: var(--primary-color);
 }
 
-/* round design */
 .slider.round {
     border-radius: 34px;
 }
+
 .slider.round:before {
     border-radius: 50%;
-}
-
 }
