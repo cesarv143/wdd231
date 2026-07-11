@@ -292,39 +292,75 @@ main h2 {
 }
 
 /* ==========================================================================
-   FOOTER STYLE
+   FOOTER BASE (Mobile First - Una sola columna centrada)
    ========================================================================== */
 footer {
     background-color: var(--primary-color);
     color: #e2e8f0;
     border-top: 4px solid var(--secondary-color);
-    padding: 2.5rem 1rem;
+    padding: 2rem 1rem;
     margin-top: 4rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;   /* En móvil van hacia abajo */
     gap: 25px;
-    text-align: center;
+    text-align: center;       /* Centrado en pantallas pequeñas */
 }
 
-footer strong {
-    color: var(--text-light);
+footer .footer-left p {
+    margin: 4px 0;
 }
 
-footer a, .footer-center .social-icon {
-    color: var(--secondary-color);
-    text-decoration: none;
-    font-size: 1.2rem;
-    margin: 0 8px;
+footer .footer-center {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer .footer-center .social-icon {
+    font-size: 1.8rem;        /* Iconos más visibles */
     cursor: pointer;
-    transition: color 0.2s;
+    transition: transform 0.2s;
 }
 
-footer a:hover, .footer-center .social-icon:hover {
-    color: var(--text-light);
+footer .footer-center .social-icon:hover {
+    transform: scale(1.1);
 }
 
 footer .footer-right p {
     margin: 4px 0;
     font-size: 0.85rem;
     color: #94a3b8;
+}
+
+/* ==========================================================================
+   DESKTOP VIEW (Para pantallas grandes - Tres columnas alineadas)
+   ========================================================================== */
+@media (min-width: 768px) {
+    footer {
+        flex-direction: row;      /* Cambia a filas (lado a lado) */
+        justify-content: space-between;
+        align-items: center;      /* Centra verticalmente los elementos */
+        padding: 2.5rem 3rem;
+    }
+
+    /* Cada bloque toma un espacio equitativo */
+    footer .footer-left,
+    footer .footer-center,
+    footer .footer-right {
+        flex: 1;
+    }
+
+    /* Alineaciones específicas del Wireframe */
+    footer .footer-left {
+        text-align: left;         /* Texto a la izquierda */
+    }
+
+    footer .footer-center {
+        display: flex;
+        justify-content: center;  /* Iconos estrictamente en el centro */
+    }
+
+    footer .footer-right {
+        text-align: right;        /* Créditos e información a la derecha */
+    }
 }
