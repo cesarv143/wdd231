@@ -8,22 +8,27 @@
     <meta name="description" content="Business Directory for the Timbuktu Chamber of Commerce. Explore premium local organizations.">
     <meta name="author" content="César Luis Velasco Domínguez">
     
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Favicon -->
+    <link rel="icon" href="https://cesarv143.github.io/wdd231/chamber/favicon.ico" type="image/x-icon">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <meta property="og:title" content="Timbuktu Chamber of Commerce - Directory">
-    <meta property="og:description" content="View our complete network of businesses and premium community partners in Timbuktu.">
+    <!-- Open Graph Meta Tags (Absolute URLs required) -->
+    <meta property="og:title" content="Timbuktu Chamber of Commerce - Business Directory">
+    <meta property="og:description" content="View our complete network of businesses and premium community partners in Timbuktu. Discover professional services and local retail stores.">
     <meta property="og:image" content="https://cesarv143.github.io/wdd231/chamber/images/logo231.png">
     <meta property="og:url" content="https://cesarv143.github.io/wdd231/chamber/directory.html">
     <meta property="og:type" content="website">
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css" media="(min-width: 768px)">
 
+    <!-- Scripts -->
     <script src="scripts/directory.js" defer></script>
 </head>
 <body>
@@ -50,13 +55,11 @@
     <main>
         <h1>Business Directory</h1>
         
-        <!-- Menu div matches your CSS for button styling -->
         <div class="menu">
             <button id="grid" class="active">⣿ Grid</button>
             <button id="list">☰ List</button>
         </div>
 
-        <!-- The grid class here is the initial state matching your CSS -->
         <div class="grid" id="directory-container">
             <!-- Data will be injected here by directory.js -->
         </div>
