@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timbuktu Chamber of Commerce - Home</title>
+    
+    <meta name="description" content="Official home page of the Timbuktu Chamber of Commerce.">
+    <meta name="author" content="César Luis Velasco Domínguez">
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 768px)">
+
+    <!-- Usaremos main.js para la lógica de Home -->
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                <img src="images/logo231.png" alt="Timbuktu Chamber of Commerce logo" class="main-logo">
+                <div class="site-title">Timbuktu Chamber of Commerce</div>
+            </div>
+            <nav id="nav-menu">
+                <a href="index.html" class="active">Home</a>
+                <a href="directory.html">Directory</a>
+                <a href="#">Join</a>
+                <a href="#">Discover</a>
+                
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle-chk" aria-label="Toggle Dark Mode">
+                    <span class="slider round"></span>
+                </label>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="images/hero.webp" alt="Timbuktu Chamber Hero">
+            <div class="hero-content">
+                <h1>Welcome to Timbuktu</h1>
+                <a href="join.html" class="cta-button">Join the Chamber</a>
+            </div>
+        </section>
+
+        <!-- Home Grid -->
+        <div class="home-grid">
+            <section class="events card">
+                <h2>Events</h2>
+                <p>Check our community schedule!</p>
+            </section>
+
+            <section id="weather" class="weather card">
+                <h2>Weather</h2>
+                <div id="weather-info"></div>
+                <div id="forecast-info"></div>
+            </section>
+
+            <section id="spotlights" class="spotlights card">
+                <!-- Se llenará vía main.js -->
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Mismo footer de tu directory.html -->
+        <div class="footer-left">
+            <p><strong>Timbuktu Chamber of Commerce</strong></p>
+            <p>10 Rue De La Paix</p>
+            <p>Timbuktu, Mali 999</p>
+        </div>
+        <div class="footer-right">
+            <p>Cesar Velasco | WDD231</p>
+            <p>&copy; <span id="current-year">2026</span></p>
+            <p id="last-modified"></p>
+        </div>
+    </footer>
+</body>
+</html>
