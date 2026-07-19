@@ -411,7 +411,7 @@ input:checked + .slider:before {
     padding: 3rem 1rem;
     margin-bottom: 2rem;
     background: var(--surface-color);
-    border-left: 5px solid var(--primary-color); /* Toque elegante */
+    border-left: 5px solid var(--primary-color);
 }
 
 .welcome-box h1 {
@@ -421,7 +421,7 @@ input:checked + .slider:before {
     letter-spacing: -0.5px;
 }
 
-/* Join Section (Estilo "Old Money" sobrio) */
+/* Join Section */
 .join-box {
     background-color: var(--primary-color);
     color: var(--text-light);
@@ -432,10 +432,10 @@ input:checked + .slider:before {
 }
 
 .join-box h2 {
-    color: var(--secondary-color); /* Dorado/Bronce */
+    color: var(--secondary-color); 
     font-size: 2rem;
     margin-bottom: 1rem;
-    border-bottom: none; /* Sobrio */
+    border-bottom: none; 
 }
 
 .join-box p {
@@ -445,12 +445,12 @@ input:checked + .slider:before {
     color: #e2e8f0;
 }
 
-/* El botón CTA */
+/* CTA */
 .btn-cta {
     display: inline-block;
     padding: 1rem 2.5rem;
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
+    background-color: var(--secondary-color, #c9a66b);
+    color: var(--primary-color, #0d2c54);
     text-decoration: none;
     font-weight: 700;
     text-transform: uppercase;
@@ -461,5 +461,8 @@ input:checked + .slider:before {
 
 .btn-cta:hover {
     background-color: #ffffff;
+    color: var(--primary-color, #0d2c54);
     transform: translateY(-2px);
+    cursor: pointer;
+    border: 1px solid var(--secondary-color, #c9a66b);
 }
