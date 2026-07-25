@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timbuktu Chamber of Commerce - Home</title>
-    <meta name="description" content="Official home of the Timbuktu Chamber of Commerce. Connecting local businesses, resources, and our community.">
+    <title>Thank You - Timbuktu Chamber of Commerce</title>
+    <meta name="description" content="Thank you for applying to join the Timbuktu Chamber of Commerce.">
     <meta name="author" content="César Luis Velasco Domínguez">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     
@@ -12,15 +12,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
-    <meta property="og:title" content="Timbuktu Chamber of Commerce - Home">
-    <meta property="og:description" content="Welcome to the Timbuktu Chamber of Commerce. Discover local businesses and join our community.">
-    <meta property="og:image" content="https://cesarv143.github.io/wdd231/chamber/images/logo231.png">
-    <meta property="og:url" content="https://cesarv143.github.io/wdd231/chamber/index.html">
-
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css" media="(min-width: 768px)">
     <script src="scripts/main.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
 </head>
 <body>
     <header>
@@ -30,7 +26,7 @@
                 <div class="site-title">Timbuktu Chamber of Commerce</div>
             </div>
             <nav id="nav-menu">
-                <a href="index.html" class="active">Home</a>
+                <a href="index.html">Home</a>
                 <a href="directory.html">Directory</a>
                 <a href="join.html">Join</a>
                 <a href="#">Discover</a>
@@ -38,31 +34,17 @@
         </div>
     </header>
 
-    <main>
-        <!-- Welcome Section -->
-        <section class="welcome-box">
-            <h1>Welcome to Timbuktu</h1>
-            <p>Your professional gateway to the heart of Mali.</p>
-            <div class="cta-container">
-                <a href="join.html" class="btn-cta">Join the Chamber</a>
+    <main class="thankyou-main">
+        <section class="thankyou-card">
+            <h1>Application Submitted Successfully!</h1>
+            <p>Thank you for applying to join the Timbuktu Chamber of Commerce. Here are the details you submitted:</p>
+            
+            <div id="results" class="results-container">
+                <!-- Los datos se inyectarán de forma dinámica mediante JavaScript con URLSearchParams -->
             </div>
+            
+            <p><a href="index.html" class="btn-cta">Return to Home</a></p>
         </section>
-
-        <div class="home-grid">
-            <section class="events card">
-                <h2>Upcoming Events</h2>
-                <p>Networking Mixer: July 25th</p>
-                <p>Business Expo: August 10th</p>
-            </section>
-            <section id="weather" class="weather card">
-                <h2>Weather</h2>
-                <div id="weather-info">Loading...</div>
-                <div id="forecast-info"></div>
-            </section>
-            <section id="spotlights" class="spotlights card">
-                <h2>Member Spotlights</h2>
-            </section>
-        </div>
     </main>
 
     <footer>
