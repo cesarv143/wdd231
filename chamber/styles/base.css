@@ -1,0 +1,276 @@
+/* ==========================================================================
+   CHAMBER DISCOVER - BASE STYLES (Mobile First)
+   Paleta Exacta: Azul Marino (#0d2c54), Dorado (#c9a66b), Acento (#d64527)
+   ========================================================================== */
+
+/* Variables exactas de tu archivo */
+:root {
+    --primary-color: #0d2c54;     
+    --secondary-color: #c9a66b;   
+    --background-color: #fafdff;  
+    --surface-color: #ffffff;     /* Card & structural container background */
+    --text-dark: #1a1a1a;         
+    --text-light: #ffffff;        
+    --accent-color: #d64527;      /* Call to actions / Badges */
+    --border-color: #e2e8f0;      /* Subtle divider colors */
+    --zebra-color: #f1f5f9;       /* Row striping */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Reset Básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-dark);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   HEADER & NAVEGACIÓN
+   ========================================================================== */
+
+header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 1rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.site-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+.logo-container img {
+    border-radius: 4px;
+}
+
+/* Botón Hamburguesa */
+#hamburger {
+    background: none;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+    font-size: 1.6rem;
+    cursor: pointer;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+#hamburger:hover,
+#hamburger:focus {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    outline: none;
+}
+
+/* Menú Desplegable (Móvil) */
+#nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    z-index: 1000;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+#nav-menu.open {
+    display: block;
+}
+
+#nav-menu ul {
+    list-style: none;
+}
+
+#nav-menu li a {
+    display: block;
+    padding: 0.9rem 1.25rem;
+    color: var(--text-light);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease;
+}
+
+#nav-menu li a:hover,
+#nav-menu li a:focus {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+#nav-menu li a.active {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--secondary-color);
+    border-left: 4px solid var(--secondary-color);
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   BANNER DE LOCALSTORAGE (MENSAJE DE VISITA)
+   ========================================================================== */
+
+.visit-banner {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-left: 5px solid var(--primary-color);
+    color: var(--primary-color);
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem 0 2rem 0;
+    border-radius: 6px;
+    font-weight: 600;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+/* ==========================================================================
+   LAYOUT DISCOVER Y NAMED GRID AREAS (MOBILE)
+   ========================================================================== */
+
+.discover-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+
+.discover-main h1 {
+    font-family: 'Cinzel', serif;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+/* Grid layout básico en 1 columna para Mobile */
+.discover-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-areas:
+        "c1"
+        "c2"
+        "c3"
+        "c4"
+        "c5"
+        "c6"
+        "c7"
+        "c8";
+}
+
+/* Mapeo de áreas */
+.card-1 { grid-area: c1; }
+.card-2 { grid-area: c2; }
+.card-3 { grid-area: c3; }
+.card-4 { grid-area: c4; }
+.card-5 { grid-area: c5; }
+.card-6 { grid-area: c6; }
+.card-7 { grid-area: c7; }
+.card-8 { grid-area: c8; }
+
+/* ==========================================================================
+   DISEÑO DE TARJETAS (DISCOVER CARDS)
+   ========================================================================== */
+
+.discover-card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-top: 4px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.discover-card h2 {
+    font-family: 'Cinzel', serif;
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.discover-card figure {
+    width: 100%;
+    max-width: 300px;
+    overflow: hidden;
+    border-radius: 6px;
+    margin-bottom: 0.75rem;
+}
+
+.discover-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.discover-card address {
+    font-style: normal;
+    font-size: 0.85rem;
+    color: #555555;
+    margin-bottom: 0.5rem;
+}
+
+.discover-card p {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+/* Botón con el color de acento / CTA */
+.learn-more-btn {
+    background-color: var(--accent-color);
+    color: var(--text-light);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #b8371d; /* Tono un poco más oscuro al pasar el cursor */
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px 0;
+    border-top: 3px solid var(--secondary-color);
+    font-size: 0.9rem;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+footer p {
+    margin-bottom: 0.3rem;
+}
