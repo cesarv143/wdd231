@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura & Essence | Website Plan</title>
+  <meta name="description" content="Site plan document for Aura & Essence - Modern Fragrance Gallery & Discovery Platform.">
+  <meta name="author" content="César Luis Velasco Domínguez">
+  <link rel="stylesheet" href="css/site-plan.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Aura & Essence</h1>
+    <h2>Website Plan Document</h2>
+  </header>
+
+  <main>
+    <!--Site Name -->
+    <section>
+      <h2>1. Site Name</h2>
+      <p><strong>Proposed Name:</strong> Aura & Essence</p>
+      <p>
+        <strong>Reason for Selection:</strong> "Aura" represents the invisible sensory projection and presence a fragrance creates around a person, while "Essence" refers to the core olfactive notes and artisanal oils used in perfumery. This name communicates luxury, sophistication, and discovery.
+      </p>
+      <p><em>Optional domain availability: aura-essence-perfumes.org</em></p>
+    </section>
+
+    <hr>
+
+    <!--Site Purpose -->
+    <section>
+      <h2>2. Site Purpose</h2>
+      <p>
+        The primary purpose of <strong>Aura & Essence</strong> is to simplify online fragrance discovery for enthusiasts and casual shoppers. Because scent cannot be smelled over the internet, the platform provides an intuitive, visual, and data-driven directory where users can explore fragrance families, dissect top/heart/base notes, filter scents based on longevity and occasion, and save their favorite selections to client-side storage. It also offers a personalized recommendation service via an interactive consultation form.
+      </p>
+    </section>
+
+    <hr>
+
+    <!--Scenarios -->
+    <section>
+      <h2>3. Target Audience Scenarios</h2>
+      <ul>
+        <li>
+          <strong>Scenario 1:</strong> "I am looking for a long-lasting, woody fragrance for formal evening events, but I don't know which scent notes (like cedar or amber) fit that profile."
+        </li>
+        <li>
+          <strong>Scenario 2:</strong> "How can I request a customized fragrance recommendation based on scents I already like?"
+        </li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <!--Color Scheme -->
+    <section>
+      <h2>4. Color Scheme</h2>
+      <p>The site plan and final web application use an elegant, dark-mode luxury color scheme designed for high contrast and readability:</p>
+      
+      <div class="color-palette">
+        <div class="color-box primary">
+          <span>Primary: Charcoal (#121212)</span>
+          <small>Main background color</small>
+        </div>
+        <div class="color-box secondary">
+          <span>Secondary: Warm Dark (#1A1A1A)</span>
+          <small>Card backgrounds and structural blocks</small>
+        </div>
+        <div class="color-box accent">
+          <span>Accent: Gold / Amber (#C5A059)</span>
+          <small>Headings, active links, buttons, and highlights</small>
+        </div>
+        <div class="color-box text">
+          <span>Text: Off-White (#F4F4F4)</span>
+          <small>Body text and paragraph content</small>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- Typography -->
+    <section>
+      <h2>5. Typography</h2>
+      <p>To establish a balance between classic luxury branding and high technical legibility, two Google Fonts are implemented:</p>
+
+      <div class="font-sample font-heading">
+        <h3>Heading Font: Cinzel (Serif)</h3>
+        <p>Used for primary site titles, major section headings (H1, H2, H3), and brand elements.</p>
+      </div>
+
+      <div class="font-sample font-body">
+        <h3>Body Font: Montserrat (Sans-Serif)</h3>
+        <p>Used for main body paragraphs, navigational links, form inputs, button labels, and fragrance card metadata.</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!--Wireframes -->
+    <section>
+      <h2>6. Wireframes</h2>
+      <p>Layout plans for the main Landing Page (<code>index.html</code>) showing responsive structures for mobile and desktop viewports.</p>
+
+      <div class="wireframe-container">
+        <div class="wireframe-box">
+          <h3>Mobile View (Small Viewport)</h3>
+          <div class="mockup mobile-mockup">
+            <div class="wf-header">[Header: Logo & Hamburger Menu]</div>
+            <div class="wf-hero">[Hero Banner: Title & Call-to-Action]</div>
+            <div class="wf-card">[Featured Perfume Card 1]</div>
+            <div class="wf-card">[Featured Perfume Card 2]</div>
+            <div class="wf-section">[Brand Story / Overview]</div>
+            <div class="wf-footer">[Footer: Links & Copyright]</div>
+          </div>
+        </div>
+
+        <div class="wireframe-box">
+          <h3>Desktop View (Large Viewport)</h3>
+          <div class="mockup desktop-mockup">
+            <div class="wf-header">[Header: Logo | Navigation Bar (Home, Catalog, Contact)]</div>
+            <div class="wf-hero">[Hero Banner: Full Width Image with Overlay CTA]</div>
+            <div class="wf-grid-header">[Featured Collection Grid (3 Columns)]</div>
+            <div class="wf-grid">
+              <div class="wf-card">[Card 1]</div>
+              <div class="wf-card">[Card 2]</div>
+              <div class="wf-card">[Card 3]</div>
+            </div>
+            <div class="wf-footer">[Footer: Nav Links | Video Walkthrough | Attributions]</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Aura & Essence | Site Plan | César Luis Velasco Domínguez</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
