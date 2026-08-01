@@ -1,52 +1,161 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cámara de Comercio - Descubrir</title>
-  <meta name="description" content="Descubre los 8 lugares de interés comercial, cultural y turístico de nuestra región.">
-  
-  <!-- Estilos CSS -->
+  <title>Chamber of Commerce - Discover Our Local Area</title>
+  <meta name="description" content="Explore key points of interest, vibrant local businesses, and cultural landmarks in our community.">
+  <meta name="author" content="César Luis Velasco Domínguez">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph Meta Tags for Social Media Sharing -->
+  <meta property="og:title" content="Chamber of Commerce - Discover Our Local Area">
+  <meta property="og:description" content="Explore key points of interest, vibrant local businesses, and cultural landmarks in our community.">
+  <meta property="og:image" content="https://yourusername.github.io/wdd230/chamber/images/hero-large.webp">
+  <meta property="og:url" content="https://yourusername.github.io/wdd230/chamber/discover.html">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/medium.css" media="(min-width: 641px)">
   <link rel="stylesheet" href="styles/larger.css" media="(min-width: 1025px)">
 
-  <!-- Script Module -->
+  <!-- JavaScript Modules -->
   <script type="module" src="scripts/discover.js"></script>
 </head>
 <body>
 
+  <!-- Header Section -->
   <header>
     <div class="logo-container">
-      <img src="images/logo.webp" alt="Logo Cámara de Comercio" width="50" height="50">
-      <span class="site-title">Cámara de Comercio</span>
+      <img src="images/logo.webp" alt="Chamber Logo" width="50" height="50" loading="lazy">
+      <span class="site-title">Chamber of Commerce</span>
     </div>
-    <button id="hamburger" aria-label="Abrir menú de navegación">&#9776;</button>
+    <button id="hamburger" aria-label="Toggle navigation menu">&#9776;</button>
     <nav id="nav-menu">
       <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="discover.html" class="active">Descubrir</a></li>
-        <li><a href="directory.html">Directorio</a></li>
-        <li><a href="join.html">Unirse</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html" class="active">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- Main Content -->
   <main class="discover-main">
-    <h1>Descubre Nuestra Región</h1>
+    <h1>Discover Our Community</h1>
 
-    <!-- Banner / Mensaje dinámico de LocalStorage -->
-    <div id="visit-message" class="visit-banner"></div>
+    <!-- LocalStorage Visit Banner Container -->
+    <div id="visit-message" class="visit-banner" aria-live="polite">
+      <!-- Dynamic message populated via JavaScript -->
+    </div>
 
-    <!-- Contenedor Grid con Named Grid Areas -->
-    <section id="cards-container" class="discover-grid">
-      <!-- Se genera dinámicamente con JavaScript -->
+    <!-- 8 Cards Grid Container mapped to Named Grid Areas -->
+    <section class="discover-grid">
+      
+      <!-- Card 1 -->
+      <article class="discover-card card-1">
+        <h2>Historic City Center</h2>
+        <figure>
+          <img src="images/historic-center.webp" alt="Historic City Center Plaza" width="300" height="200" loading="lazy">
+        </figure>
+        <address>Main Plaza, Downtown District</address>
+        <p>Explore centuries of architectural heritage, local artisan shops, and vibrant public squares in the heart of our city.</p>
+        <button type="button" class="learn-more-btn">Learn More</button>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="discover-card card-2">
+        <h2>Metropolitan Cultural Center</h2>
+        <figure>
+          <img src="images/cultural-center.webp" alt="Metropolitan Cultural Center facade" width="300" height="200" loading="lazy">
+        </figure>
+        <address>450 Avenue of the Arts</address>
+        <p>A premier venue featuring rotating modern art exhibits, classic musical performances, and community theater productions.</p>
+        <button type="button" class="learn-more-btn">Learn More</button>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="discover-card card-3">
+        <h2>Riverside Business Park</h2>
+        <figure>
+          <img src="images/business-park.webp" alt="Modern office buildings at Riverside Business Park" width="300" height="200" loading="lazy">
+        </figure>
+        <address>1200 Innovation Way</address>
+        <p>Home to cutting-edge technology start-ups, corporate headquarters, and collaborative modern co-working hubs.</p>
+        <button type="button" class="learn-more-btn">Learn More</button>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="discover-card card-4">
+        <h2>Botanical Gardens & Conservatory</h2>
+        <figure>
+          <img src="images/botanical-gardens.webp" alt="Tropical glass conservatory at the Botanical Gardens" width="300" height="200" loading="lazy">
+        </figure>
+        <address>88 Parkside Boulevard</address>
+        <p>Immerse yourself in lush greenery, rare tropical flora, and peaceful walking trails designed for public relaxation.</p>
+        <button type="button" class="learn-more-btn">Learn More</button>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="discover-card card-5">
+        <h2>Artisan Craft Market</h2>
+        <figure>
+          <img src="images/artisan-market.webp" alt="Local craft vendor booth at the outdoor market" width="300" height="200" loading="lazy">
+        </figure>
+        <address>210 Market Street</address>
+        <p>Support local entrepreneurs offering handmade jewelry, organic food items, and traditional handcrafted goods.</p>
+        <button type="button" class="learn-more-btn">Learn More</button>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="discover-card card-6">
+        <h2>Community Sports Complex</h2>
+        <figure>
+          <img src="images/sports-complex.webp" alt="Aerial view of sports fields and athletic facilities" width="300" height="200" loading="lazy">
+        </figure>
+        <address>500 Stadium Drive</address>
+        <p>State-of-the-art sports facilities hosting regional tournaments, fitness leagues, and youth athletic programs.</p>
+        <button type="button" class="learn-more-btn">Learn More</button>
+      </article>
+
+      <!-- Card 7 -->
+      <article class="discover-card card-7">
+        <h2>Pioneer Heritage Museum</h2>
+        <figure>
+          <img src="images/pioneer-museum.webp" alt="Historic museum building exhibit entrance" width="300" height="200" loading="lazy">
+        </figure>
+        <address>75 History Lane</address>
+        <p>Discover interactive exhibits and artifacts documenting the rich history and early founding families of our region.</p>
+        <button type="button" class="learn-more-btn">Learn More</button>
+      </article>
+
+      <!-- Card 8 -->
+      <article class="discover-card card-8">
+        <h2>Waterfront Promenade</h2>
+        <figure>
+          <img src="images/waterfront-promenade.webp" alt="Sunset view along the waterfront boardwalk" width="300" height="200" loading="lazy">
+        </figure>
+        <address>Harbor View Drive</address>
+        <p>A scenic pedestrian boardwalk featuring waterfront dining, seasonal festivals, and stunning panoramic views.</p>
+        <button type="button" class="learn-more-btn">Learn More</button>
+      </article>
+
     </section>
   </main>
 
+  <!-- Footer Section -->
   <footer>
-    <p>&copy; <span id="year"></span> Cámara de Comercio | Todos los derechos reservados.</p>
-    <p id="lastModified"></p>
+    <p>&copy; <span id="currentyear"></span> Chamber of Commerce | César Luis Velasco Domínguez | WDD 230</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
   </footer>
 
 </body>
