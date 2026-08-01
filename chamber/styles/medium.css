@@ -1,0 +1,31 @@
+/* ==========================================================================
+   DISCOVER GRID - MEDIUM LAYOUT (2 Columnas Asimétricas)
+   ========================================================================== */
+
+@media (min-width: 641px) {
+  .discover-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "c1 c2"
+      "c3 c3"  /* c3 abarca todo el ancho */
+      "c4 c5"
+      "c6 c5"  /* c5 abarca 2 filas de alto */
+      "c7 c8";
+  }
+
+  /* ------------------------------------------------------------------------
+     EFECTO HOVER EN IMÁGENES (Criterio 13: Solo en vistas medianas/grandes)
+     ------------------------------------------------------------------------ */
+  .discover-card figure {
+    overflow: hidden;
+  }
+
+  .discover-card img {
+    transition: transform 0.4s ease, filter 0.4s ease;
+  }
+
+  .discover-card figure:hover img {
+    transform: scale(1.08);
+    filter: brightness(1.1) contrast(1.05);
+  }
+}
