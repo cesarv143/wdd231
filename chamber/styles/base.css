@@ -8,12 +8,11 @@
   --primary-color: #0d2c54;     
   --secondary-color: #c9a66b;   
   --background-color: #fafdff;  
-  --surface-color: #ffffff;     /* Card & structural container background */
+  --surface-color: #ffffff;     
   --text-dark: #1a1a1a;         
   --text-light: #ffffff;        
-  --accent-color: #d64527;      /* Call to actions / Badges */
-  --border-color: #e2e8f0;      /* Subtle divider colors */
-  --zebra-color: #f1f5f9;       /* Row striping */
+  --accent-color: #d64527;      
+  --border-color: #e2e8f0;      
   --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -72,7 +71,7 @@ header {
   cursor: pointer;
   padding: 0.2rem 0.6rem;
   border-radius: 4px;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #hamburger:hover,
@@ -110,7 +109,7 @@ header {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 #nav-menu li a:hover,
@@ -248,14 +247,16 @@ header {
   padding: 0.6rem 1.2rem;
   border-radius: 4px;
   font-family: 'Cinzel', serif;
-  font-weight: bold;
+  font-weight: 700;
   cursor: pointer;
   width: 100%;
   transition: background-color 0.2s ease;
 }
 
-.learn-more-btn:hover {
+.learn-more-btn:hover,
+.learn-more-btn:focus {
   background-color: #b8371d;
+  outline: none;
 }
 
 /* ==========================================================================

@@ -1,73 +1,57 @@
-// scripts/discover.js
-import { places } from '../data/discover.mjs';
+/* ==========================================================================
+   DISCOVER PAGE JAVASCRIPT MODULE
+   ========================================================================== */
 
-document.addEventListener('DOMContentLoaded', () => {
-  // 1. Manejo del menú Responsive
-  const hamburger = document.getElementById('hamburger');
-  const navMenu = document.getElementById('nav-menu');
+document.addEventListener("DOMContentLoaded", () => {
+  // 1. Mobile Hamburger Menu Toggle
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("nav-menu");
 
   if (hamburger && navMenu) {
-    hamburger.addEventListener('click', () => {
-      navMenu.classList.toggle('open');
+    hamburger.addEventListener("click", () => {
+      navMenu.classList.toggle("open");
+      const isOpen = navMenu.classList.contains("open");
+      hamburger.setAttribute("aria-expanded", isOpen);
     });
   }
 
-  // 2. Renderizar Tarjetas de Interés
-  const container = document.getElementById('cards-container');
+  // 2. Footer Dates (Current Year & Last Modified)
+  const currentYearSpan = document.getElementById("currentyear");
+  const lastModifiedSpan = document.getElementById("lastModified");
 
-  if (container) {
-    places.forEach((place, index) => {
-      const card = document.createElement('article');
-      // Asignamos una clase específica para mapearla a grid-area (card-1, card-2, ...)
-      card.className = `discover-card card-${index + 1}`;
-
-      card.innerHTML = `
-        <h2>${place.title}</h2>
-        <figure>
-          <img src="${place.photo}" alt="${place.alt}" width="300" height="200" loading="lazy">
-        </figure>
-        <address>${place.address}</address>
-        <p>${place.description}</p>
-        <button class="learn-more-btn">Aprender Más</button>
-      `;
-
-      container.appendChild(card);
-    });
+  if (currentYearSpan) {
+    currentYearSpan.textContent = new Date().getFullYear();
   }
 
-  // 3. LocalStorage: Mensaje de Visita
-  handleVisitMessage();
+  if (lastModifiedSpan) {
+    lastModifiedSpan.textContent = document.lastModified;
+  }
 
-  // 4. Footer Dates
-  document.getElementById('year').textContent = new Date().getFullYear();
-  document.getElementById('lastModified').textContent = `Última modificación: ${document.lastModified}`;
-});
+  // 3. LocalStorage Visitor Tracking Banner
+  const visitMessageContainer = document.getElementById("visit-message");
+  
+  if (visitMessageContainer) {
+    const lastVisit = localStorage.getItem("lastVisitDate");
+    const now = Date.now();
+    const msInDay = 86400000; // 1000 * 60 * 60 * 24
 
-function handleVisitMessage() {
-  const messageElement = document.getElementById('visit-message');
-  if (!messageElement) return;
-
-  const msInDay = 86400000; // 1000 * 60 * 60 * 24
-  const currentVisit = Date.now();
-  const lastVisit = localStorage.getItem('lastVisitDate');
-
-  if (!lastVisit) {
-    messageElement.textContent = "Welcome! Let us know if you have any questions.";
-  } else {
-    const timeDifference = currentVisit - parseInt(lastVisit, 10);
-    const daysDifference = Math.floor(timeDifference / msInDay);
-
-    if (timeDifference < msInDay) {
-      messageElement.textContent = "Back so soon! Awesome!";
+    if (!lastVisit) {
+      // First time visiting
+      visitMessageContainer.textContent = "Welcome! Let us know if you have any questions.";
     } else {
-      if (daysDifference === 1) {
-        messageElement.textContent = "You last visited 1 day ago.";
+      const timeDifference = now - parseInt(lastVisit, 10);
+      const daysDifference = Math.floor(timeDifference / msInDay);
+
+      if (daysDifference < 1) {
+        visitMessageContainer.textContent = "Back so soon! Great to see you!";
+      } else if (daysDifference === 1) {
+        visitMessageContainer.textContent = "You last visited 1 day ago.";
       } else {
-        messageElement.textContent = `You last visited ${daysDifference} days ago.`;
+        visitMessageContainer.textContent = `You last visited ${daysDifference} days ago.`;
       }
     }
-  }
 
-  // Guardar la fecha actual de la visita
-  localStorage.setItem('lastVisitDate', currentVisit.toString());
-}
+    // Update the last visit timestamp in LocalStorage
+    localStorage.setItem("lastVisitDate", now.toString());
+  }
+});
