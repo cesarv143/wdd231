@@ -4,7 +4,7 @@ import { initModal } from "./modules/modal.js";
 import { trackVisits } from "./modules/storage.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
-  // Navigation Menu Toggle
+  // Navigation Menu
   const menuBtn = document.querySelector("#menu-toggle");
   const navMenu = document.querySelector("#main-nav");
 
@@ -20,16 +20,16 @@ document.addEventListener("DOMContentLoaded", async () => {
     yearSpan.textContent = new Date().getFullYear();
   }
 
-  // Visit Tracker Execution
+  // Visit
   const visitCounter = document.querySelector("#visit-counter");
   if (visitCounter) {
     trackVisits(visitCounter);
   }
 
-  // Modal Setup
+  
   const openModal = initModal();
 
-  // Load Perfumes & Initialize Grid
+  
   const container = document.querySelector("#perfume-grid");
   const perfumes = await fetchPerfumes();
 
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     renderPerfumeCards(perfumes, container, openModal);
   }
 
-  // Filter Buttons Handler
+  // Filter Buttons
   const filterButtons = document.querySelectorAll(".filter-btn");
   filterButtons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   });
 
-  // Search Input Handler (Catalog Page)
+  // Search
   const searchInput = document.querySelector("#search-input");
   if (searchInput) {
     searchInput.addEventListener("input", () => {
