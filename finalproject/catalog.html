@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Catalog | Aura & Essence</title>
+  <meta name="description" content="Search and filter through the entire Aura & Essence fragrance library.">
+  <meta name="author" content="César Luis Velasco Domínguez">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <script type="module" src="scripts/main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo">Aura & Essence</a>
+      <button id="menu-toggle" class="hamburger-btn" aria-label="Toggle Navigation Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <nav id="main-nav" class="nav-menu">
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="catalog.html" class="nav-link active">Full Catalog</a></li>
+          <li><a href="index.html#consultation" class="nav-link">Consultation</a></li>
+          <li><a href="site-plan.html" class="nav-link">Site Plan</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="catalog-section">
+      <div class="section-title">
+        <h2>Fragrance Directory</h2>
+        <p>Search by House, Note, or Olfactive Profile</p>
+      </div>
+
+      <!-- Live Search & Category Filter Controls -->
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search perfume name or brand..." aria-label="Search Fragrances">
+      </div>
+
+      <div class="filter-group">
+        <button class="filter-btn active" data-family="all">All Scents</button>
+        <button class="filter-btn" data-family="Woody">Woody</button>
+        <button class="filter-btn" data-family="Amber">Amber</button>
+        <button class="filter-btn" data-family="Aromatic">Aromatic</button>
+        <button class="filter-btn" data-family="Gourmand">Gourmand</button>
+      </div>
+
+      <div id="perfume-grid" class="perfume-grid">
+        <!-- Dynamic Cards Injected Here -->
+      </div>
+    </section>
+  </main>
+
+  <!-- HTML5 Modal Dialog -->
+  <dialog id="perfume-modal" class="perfume-dialog">
+    <div class="modal-content">
+      <button id="close-modal" class="close-btn" aria-label="Close dialog">&times;</button>
+      <div id="modal-details" class="modal-body">
+        <!-- Dynamic Modal Content Injected Here -->
+      </div>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="current-year"></span> Aura & Essence | César Luis Velasco Domínguez</p>
+  </footer>
+</body>
+</html>

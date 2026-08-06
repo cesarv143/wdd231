@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura & Essence | Luxury Fragrance Gallery</title>
+  <meta name="description" content="Explore luxury artisanal scents, detailed olfactory pyramids, and personalized fragrance consultations at Aura & Essence.">
+  <meta name="author" content="César Luis Velasco Domínguez">
+  
+  <link rel="stylesheet" href="styles/styles.css?v=1.2">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <script type="module" src="scripts/main.js"></script>
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo">Aura & Essence</a>
+      <button id="menu-toggle" class="hamburger-btn" aria-label="Toggle Navigation Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <nav id="main-nav" class="nav-menu">
+        <ul>
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="catalog.html" class="nav-link">Full Catalog</a></li>
+          <li><a href="#consultation" class="nav-link">Consultation</a></li>
+          <li><a href="site-plan.html" class="nav-link">Site Plan</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Banner with Featured Image -->
+    <section class="hero-banner">
+      <div class="hero-content">
+        <h1>Unveil Your Invisible Signature</h1>
+        <p>Explore artisanal olfactive profiles, rare accords, and curated niche extraits de parfum.</p>
+        <a href="#catalog-preview" class="cta-button">Explore Collection</a>
+      </div>
+      <div class="hero-image-container">
+        <img src="images/hero-perfume.jpg" alt="Luxury perfume bottle display" class="hero-img" loading="eager">
+      </div>
+    </section>
+
+    <!-- Visit Counter Banner -->
+    <section class="tracker-bar">
+      <p id="visit-counter">Welcome to Aura & Essence.</p>
+    </section>
+
+    <!-- Interactive Fragrance Catalog Grid -->
+    <section id="catalog-preview" class="catalog-section">
+      <div class="section-title">
+        <h2>Curated Collection</h2>
+        <p>Filter by Olfactive Family</p>
+      </div>
+
+      <div class="filter-group">
+        <button class="filter-btn active" data-family="all">All Scents</button>
+        <button class="filter-btn" data-family="Woody">Woody</button>
+        <button class="filter-btn" data-family="Amber">Amber</button>
+        <button class="filter-btn" data-family="Aromatic">Aromatic</button>
+        <button class="filter-btn" data-family="Gourmand">Gourmand</button>
+      </div>
+
+      <!-- Container where JavaScript renders dynamic fragrance cards -->
+      <div id="perfume-grid" class="perfume-grid">
+        <!-- Dynamic Content Injected via JS -->
+      </div>
+    </section>
+
+    <!-- Form Section -->
+    <section id="consultation" class="consultation-section">
+      <div class="section-title">
+        <h2>Bespoke Consultation</h2>
+        <p>Receive tailored scent recommendations from our master perfumers</p>
+      </div>
+
+      <form action="thankyou.html" method="get" class="consultation-form">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" required placeholder="e.g. Julian Vance">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required placeholder="e.g. julian@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="preferredFamily">Preferred Scent Family</label>
+          <select id="preferredFamily" name="preferredFamily" required>
+            <option value="" disabled selected>Select a profile...</option>
+            <option value="Woody & Earthy">Woody & Earthy</option>
+            <option value="Warm Amber & Spice">Warm Amber & Spice</option>
+            <option value="Fresh Aromatic">Fresh Aromatic</option>
+            <option value="Rich Gourmand">Rich Gourmand</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="occasion">Intended Occasion</label>
+          <input type="text" id="occasion" name="occasion" placeholder="e.g. Formal Evening Events, Daily Wear">
+        </div>
+
+        <button type="submit" class="cta-button submit-btn">Request Recommendation</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- HTML5 Modal Dialog Container -->
+  <dialog id="perfume-modal" class="perfume-dialog">
+    <div class="modal-content">
+      <button id="close-modal" class="close-btn" aria-label="Close dialog">&times;</button>
+      <div id="modal-details" class="modal-body">
+        <!-- Dynamic Modal Info Injected Here -->
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; <span id="current-year"></span> Aura & Essence | César Luis Velasco Domínguez</p>
+  </footer>
+
+</body>
+</html>

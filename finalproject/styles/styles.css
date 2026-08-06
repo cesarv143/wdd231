@@ -1,0 +1,480 @@
+/* ==========================================================================
+   AURA & ESSENCE - GLOBAL STYLESHEET
+   File: styles/styles.css
+   ========================================================================== */
+
+:root {
+  --primary-bg: #121212;
+  --secondary-bg: #1a1a1a;
+  --accent-gold: #c5a059;
+  --accent-hover: #e0b86c;
+  --text-light: #f4f4f4;
+  --text-muted: #a0a0a0;
+  --border-color: #333333;
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'Montserrat', sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--primary-bg);
+  color: var(--text-light);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+/* Header & Responsive Navigation */
+.site-header {
+  background-color: var(--secondary-bg);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--accent-gold);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.hamburger-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger-btn .bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--accent-gold);
+  transition: all 0.3s ease;
+}
+
+.nav-menu {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--secondary-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nav-menu.open {
+  display: block;
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.nav-link {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--accent-gold);
+}
+
+/* Hero Section */
+.hero-banner {
+  background: linear-gradient(rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.9)), radial-gradient(circle, #2a2215 0%, #121212 80%);
+  padding: 4rem 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero-content h1 {
+  font-family: var(--font-heading);
+  color: var(--accent-gold);
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+.hero-image-container {
+  max-width: 500px;
+  width: 100%;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  object-fit: cover;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--accent-gold);
+  color: #121212;
+  padding: 0.8rem 1.8rem;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: var(--accent-hover);
+}
+
+/* Visit Tracker Bar */
+.tracker-bar {
+  background-color: var(--secondary-bg);
+  text-align: center;
+  padding: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Catalog Grid & Filters */
+.catalog-section, .consultation-section {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-title h2 {
+  font-family: var(--font-heading);
+  color: var(--accent-gold);
+  font-size: 1.8rem;
+}
+
+.section-title p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.search-container {
+  max-width: 500px;
+  margin: 0 auto 1.5rem auto;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: var(--secondary-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-light);
+  border-radius: 4px;
+  font-family: var(--font-body);
+}
+
+.search-container input:focus {
+  outline: 1px solid var(--accent-gold);
+}
+
+.filter-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  background-color: var(--secondary-bg);
+  color: var(--text-light);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: var(--font-body);
+  transition: all 0.3s;
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background-color: var(--accent-gold);
+  color: #121212;
+  font-weight: 600;
+}
+
+.perfume-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.perfume-card {
+  background-color: var(--secondary-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.card-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  background-color: var(--primary-bg);
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(18, 18, 18, 0.6);
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.favorite-btn.saved {
+  color: var(--accent-gold);
+}
+
+.card-brand {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  letter-spacing: 1px;
+}
+
+.card-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  margin: 0.25rem 0;
+}
+
+.card-meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.card-price {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.details-btn {
+  background: transparent;
+  color: var(--accent-gold);
+  border: 1px solid var(--accent-gold);
+  padding: 0.5rem;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.details-btn:hover {
+  background-color: var(--accent-gold);
+  color: #121212;
+}
+
+/* Consultation Form */
+.consultation-form {
+  background-color: var(--secondary-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
+  color: var(--text-light);
+}
+
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--primary-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-light);
+  border-radius: 4px;
+  font-family: var(--font-body);
+}
+
+.submit-btn {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Modal Dialog */
+.perfume-dialog {
+  margin: auto;
+  background-color: var(--secondary-bg);
+  color: var(--text-light);
+  border: 1px solid var(--accent-gold);
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+}
+
+.perfume-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--accent-gold);
+  cursor: pointer;
+}
+
+.modal-img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  background-color: var(--primary-bg);
+}
+
+.modal-body h2 {
+  font-family: var(--font-heading);
+  color: var(--accent-gold);
+  margin-bottom: 0.5rem;
+}
+
+.notes-list {
+  margin: 1rem 0;
+  list-style: none;
+}
+
+.notes-list li {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Thank You Summary Card */
+.thanks-main {
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.summary-box {
+  background-color: var(--secondary-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  text-align: left;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Responsive Viewports */
+@media (min-width: 768px) {
+  .hamburger-btn {
+    display: none;
+  }
+
+  .nav-menu {
+    display: block;
+    position: static;
+    width: auto;
+    background: none;
+    border: none;
+  }
+
+  .nav-menu ul {
+    flex-direction: row;
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .hero-banner {
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+  }
+
+  .hero-content p {
+    margin-left: 0;
+  }
+
+  .perfume-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

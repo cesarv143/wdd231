@@ -1,0 +1,167 @@
+[
+  {
+    "id": 1,
+    "name": "Noir Kogane",
+    "brand": "Armani Privé",
+    "family": "Woody",
+    "price": 375,
+    "concentration": "Eau de Parfum Intense",
+    "topNotes": "Tobacco Leaf, Cumin",
+    "heartNotes": "Saffron, Elemi",
+    "baseNotes": "Dark Leather, Haitian Vetiver"
+  },
+  {
+    "id": 2,
+    "name": "Stronger With You Intensely",
+    "brand": "Emporio Armani",
+    "family": "Amber",
+    "price": 130,
+    "concentration": "Eau de Parfum",
+    "topNotes": "Pink Pepper, Juniper",
+    "heartNotes": "Toffee, Cinnamon, Lavender",
+    "baseNotes": "Vanilla, Amber, Tonka Bean"
+  },
+  {
+    "id": 3,
+    "name": "Bleu de Chanel Parfum",
+    "brand": "Chanel",
+    "family": "Woody",
+    "price": 180,
+    "concentration": "Parfum",
+    "topNotes": "Lemon Zest, Bergamot, Mint",
+    "heartNotes": "Lavender, Geranium, Pineapple",
+    "baseNotes": "New Caledonian Sandalwood, Cedar"
+  },
+  {
+    "id": 4,
+    "name": "Sauvage Elixir",
+    "brand": "Dior",
+    "family": "Aromatic",
+    "price": 250,
+    "concentration": "Parfum Extract",
+    "topNotes": "Cinnamon, Nutmeg, Cardamom",
+    "heartNotes": "Lavender",
+    "baseNotes": "Licorice, Sandalwood, Amber"
+  },
+  {
+    "id": 5,
+    "name": "Tobacco Vanille",
+    "brand": "Tom Ford",
+    "family": "Amber",
+    "price": 395,
+    "concentration": "Eau de Parfum",
+    "topNotes": "Tobacco Leaf, Spicy Notes",
+    "heartNotes": "Vanilla, Cacao, Tonka Bean",
+    "baseNotes": "Dried Fruits, Woody Notes"
+  },
+  {
+    "id": 6,
+    "name": "Oud Wood",
+    "brand": "Tom Ford",
+    "family": "Woody",
+    "price": 295,
+    "concentration": "Eau de Parfum",
+    "topNotes": "Rare Oud, Rosewood",
+    "heartNotes": "Cardamom, Sichuan Pepper",
+    "baseNotes": "Sandalwood, Vetiver, Tonka Bean"
+  },
+  {
+    "id": 7,
+    "name": "Aventus",
+    "brand": "Creed",
+    "family": "Aromatic",
+    "price": 495,
+    "concentration": "Eau de Parfum",
+    "topNotes": "Pineapple, Bergamot, Blackcurrant",
+    "heartNotes": "Birch, Patchouli, Moroccan Jasmine",
+    "baseNotes": "Musk, Oakmoss, Ambergris"
+  },
+  {
+    "id": 8,
+    "name": "Baccarat Rouge 540",
+    "brand": "Maison Francis Kurkdjian",
+    "family": "Amber",
+    "price": 325,
+    "concentration": "Eau de Parfum",
+    "topNotes": "Jasmine, Saffron",
+    "heartNotes": "Amberwood, Ambergris",
+    "baseNotes": "Fir Resin, Cedar"
+  },
+  {
+    "id": 9,
+    "name": "Angels' Share",
+    "brand": "Kilian Paris",
+    "family": "Gourmand",
+    "price": 245,
+    "concentration": "Eau de Parfum",
+    "topNotes": "Cognac",
+    "heartNotes": "Cinnamon, Tonka Bean, Oak",
+    "baseNotes": "Praline, Vanilla, Sandalwood"
+  },
+  {
+    "id": 10,
+    "name": "Layton",
+    "brand": "Parfums de Marly",
+    "family": "Amber",
+    "price": 320,
+    "concentration": "Eau de Parfum",
+    "topNotes": "Apple, Lavender, Bergamot",
+    "heartNotes": "Jasmine, Violet, Geranium",
+    "baseNotes": "Vanilla, Cardamom, Sandalwood"
+  },
+  {
+    "id": 11,
+    "name": "Naxos",
+    "brand": "Xerjoff",
+    "family": "Aromatic",
+    "price": 275,
+    "concentration": "Eau de Parfum",
+    "topNotes": "Lavender, Bergamot, Lemon",
+    "heartNotes": "Honey, Cinnamon, Cashmeran",
+    "baseNotes": "Tobacco Leaf, Vanilla, Tonka Bean"
+  },
+  {
+    "id": 12,
+    "name": "Dior Homme Intense",
+    "brand": "Dior",
+    "family": "Woody",
+    "price": 140,
+    "concentration": "Eau de Parfum",
+    "topNotes": "Tuscan Iris",
+    "heartNotes": "Ecuadorian Ambrette",
+    "baseNotes": "Virginia Cedar, Vetiver"
+  },
+  {
+    "id": 13,
+    "name": "Reflection Man",
+    "brand": "Amouage",
+    "family": "Aromatic",
+    "price": 360,
+    "concentration": "Eau de Parfum",
+    "topNotes": "Rosemary, Red Pepper Berries",
+    "heartNotes": "Orris, Jasmine, Neroli",
+    "baseNotes": "Sandalwood, Cedarwood, Vetiver"
+  },
+  {
+    "id": 14,
+    "name": "Acqua di Giò Profondo",
+    "brand": "Giorgio Armani",
+    "family": "Aromatic",
+    "price": 135,
+    "concentration": "Eau de Parfum",
+    "topNotes": "Marine Notes, Green Mandarin",
+    "heartNotes": "Rosemary, Lavender, Cypress",
+    "baseNotes": "Amber, Patchouli, Musk"
+  },
+  {
+    "id": 15,
+    "name": "Spicebomb Extreme",
+    "brand": "Viktor&Rolf",
+    "family": "Gourmand",
+    "price": 130,
+    "concentration": "Eau de Parfum",
+    "topNotes": "Black Pepper, Grapefruit",
+    "heartNotes": "Saffron, Cinnamon",
+    "baseNotes": "Bourbon Vanilla, Amber, Tobacco"
+  }
+]
